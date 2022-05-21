@@ -23,8 +23,8 @@ npm start
 #### Install emscripten
 *Instructions from https://emscripten.org/docs/getting_started/downloads.html*
 ```batch
-    # Install Python
-    sudo apt-get install python3
+  # Install Python
+  sudo apt-get install python3
 
 	# Get the emsdk repo
 	git clone https://github.com/emscripten-core/emsdk.git
