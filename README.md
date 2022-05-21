@@ -23,31 +23,31 @@ npm start
 #### Install emscripten
 *Instructions from https://emscripten.org/docs/getting_started/downloads.html*
 ```batch
-	# Install Python
-  	sudo apt-get install python3
+# Install Python
+sudo apt-get install python3
 
-	# Get the emsdk repo
-	git clone https://github.com/emscripten-core/emsdk.git
-        
-	# Enter that directory
-	cd emsdk
-	
-	# Fetch the latest version of the emsdk (not needed the first time you clone)
-	git pull
-    
-	# Download and install the latest SDK tools.
-	./emsdk install latest
-    
-	# Make the "latest" SDK "active" for the current user. (writes .emscripten file)
-	./emsdk activate latest
-    
-	# Activate PATH and other environment variables in the current terminal
-	source ./emsdk_env.sh
+Get the emsdk repo
+git clone https://github.com/emscripten-core/emsdk.git
+       
+# Enter that directory
+cd emsdk
+
+# Fetch the latest version of the emsdk (not needed the first time you clone)
+git pull
+   
+# Download and install the latest SDK tools.
+./emsdk install latest
+   
+# Make the "latest" SDK "active" for the current user. (writes .emscripten file)
+./emsdk activate latest
+   
+# Activate PATH and other environment variables in the current terminal
+source ./emsdk_env.sh
 ```
 
 #### Compile C++ to Wasm module
 ```batch
-emcc --bind bindings/SampleOperations.cpp -Icpp/ cpp/*.cpp -s WASM=1 -s MODULARIZE=1 -o Operations.js
+emcc --bind bindings/OperationsBindings.cpp -Icpp/ cpp/*.cpp -s WASM=1 -s MODULARIZE=1 -o Operations.js
 ```
 
 ### Known Issues
